@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chisom Wonodi - Software Engineering Student & Web Developer Portfolio">
+    <meta name="keywords" content="web developer, software engineer, portfolio, projects, JavaScript, React">
+    <meta property="og:title" content="Chisom Wonodi - Portfolio">
+    <meta property="og:description" content="Software Engineering Student & Web Developer">
+    <title>Chisom Wonodi - Software Engineer Portfolio</title>
+    <link type="text/css" rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Chisom Wonodi</h1>
+        <h2>Software Engineering Student & Web Developer</h2>
+    </header>
+    
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hi, I'm <span class="name-highlight">Chisom Wonodi</span></h1>
+                    <p class="hero-subtitle">Building digital solutions that make a difference</p>
+                    <p class="hero-description">
+                        I'm a passionate software engineering student specializing in creating 
+                        clean, responsive websites and applications. I love turning complex 
+                        problems into simple, beautiful solutions.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="button primary">View My Work</a>
+                        <a href="#contact" class="button secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-img">
+                        <span>CW</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="skills">
+            <h2>Skills & Technologies</h2>
+            <div class="skills-grid" id="skills-container">
+                <!-- Skills populated by JavaScript -->
+            </div>
+        </section>
+        
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid" id="featured-projects">
+                <!-- Featured projects populated by JavaScript -->
+            </div>
+            <div class="center">
+                <a href="projects.html" class="button outline">View All Projects</a>
+            </div>
+        </section>
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a passionate software engineering student with a love for creating digital solutions 
+                        that are both functional and beautiful. My journey in tech started when I built my first 
+                        website in high school, and I've been hooked ever since.
+                    </p>
+                    <p>
+                        When I'm not coding, you can find me hiking local trails, reading sci-fi novels, 
+                        or experimenting with new recipes in the kitchen. I believe that great code, like 
+                        great food, requires the right ingredients and careful attention to detail.
+                    </p>
+                    <p>
+                        I'm currently looking for internship opportunities where I can apply my skills 
+                        and continue learning from experienced developers.
+                    </p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="project-count">0</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="skill-count">0</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="experience">2</span>
+                            <span class="stat-label">Years Learning</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-img">
+                        <span>About Me</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Work Together</h3>
+                    <p>I'm always open to discussing new opportunities, projects, or just chatting about tech.</p>
+                    <div class="contact-details">
+                        <p>📧 chisom.wonodi@email.com</p>
+                        <p>📞 (555) 123-4567</p>
+                        <p>📍 Portland, OR</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/chisom035" target="_blank">GitHub</a>
+                        <a href="https://linkedin.com/in/chisomwonodi" target="_blank">LinkedIn</a>
+                        <a href="mailto:chisom.wonodi@email.com">Email</a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="input-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        <span class="error" id="name-error"></span>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                        <span class="error" id="email-error"></span>
+                    </div>
+                    <div class="input-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project or opportunity"></textarea>
+                        <span class="error" id="message-error"></span>
+                    </div>
+                    <button type="submit" class="button primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Chisom Wonodi. Built with HTML, CSS & JavaScript.</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
