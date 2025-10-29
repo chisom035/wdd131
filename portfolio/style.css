@@ -1,0 +1,185 @@
+/* Google Fonts Import */
+@import url("https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato");
+
+:root {
+  /* Colors from Chisom's palette */
+  --primary-color: #396e94;
+  --secondary-color: #e7c24f;
+  --accent1-color: #a43312;
+  --accent2-color: #ffffff;
+
+  /* Typography */
+  --heading-font: "IM Fell French Canon SC", serif;
+  --paragraph-font: Lato, Helvetica, sans-serif;
+
+  /* Text colors on backgrounds */
+  --headline-color-on-white: var(--primary-color);
+  --headline-color-on-color: white;
+  --paragraph-color-on-white: var(--primary-color);
+  --paragraph-color-on-color: white;
+  --paragraph-background-color: var(--primary-color);
+  --nav-link-color: var(--primary-color);
+  --nav-background-color: var(--secondary-color);
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: var(--primary-color);
+}
+
+/* =============== GLOBAL STYLES =============== */
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4em;
+  font-size: 18px;
+  font-family: var(--paragraph-font);
+  background-color: #f9f9f9;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+  margin-top: 1em;
+}
+
+h2 {
+  text-align: center;
+}
+
+hr {
+  height: 3px;
+  margin: 35px 0;
+  background: var(--accent1-color);
+  border: none;
+}
+
+header {
+  padding: 1em;
+  text-align: center;
+  color: var(--paragraph-color-on-color);
+  background-color: var(--paragraph-background-color);
+  border-radius: 8px;
+  margin-bottom: 2em;
+}
+
+header > h1,
+header > h2 {
+  color: var(--headline-color-on-color);
+  margin: 0.5em 0;
+}
+
+p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  padding: 1em 0;
+  line-height: 1.6;
+}
+
+/* =============== COLOR TABLE =============== */
+.colors {
+  width: 100%;
+  min-width: 350px;
+  margin: 30px auto;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.colors th {
+  background-color: #999;
+  color: white;
+  padding: 0.8em;
+  font-family: var(--heading-font);
+}
+
+.colors td {
+  width: 25%;
+  height: 3em;
+  border: 1px solid #ddd;
+}
+
+.primary   { background-color: var(--primary-color); color: white; }
+.secondary { background-color: var(--secondary-color); color: #000; }
+.accent1   { background-color: var(--accent1-color); color: white; }
+.accent2   { background-color: var(--accent2-color); color: #000; border: 1px solid #ccc; }
+
+p.colored {
+  background-color: var(--paragraph-background-color);
+  color: var(--paragraph-color-on-color);
+  border-radius: 6px;
+  margin: 1.5em 0;
+}
+
+/* =============== NAVIGATION =============== */
+nav {
+  background-color: var(--nav-background-color);
+  line-height: 3em;
+  text-align: center;
+  font-size: 1.2em;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 1.5em 0;
+}
+
+nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  padding: 1em;
+  min-width: 120px;
+  text-decoration: none;
+  color: var(--nav-link-color);
+  transition: all 0.3s ease;
+  display: block;
+}
+
+nav a:link,
+nav a:visited {
+  color: var(--nav-link-color);
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+
+/* =============== WIRESFAME STYLING =============== */
+div[style*="text-align: center"] > div[style*="background: white"] {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+div[style*="background: #396e94"] { font-weight: bold; }
+div[style*="background: #e7c24f"] { font-weight: bold; }
+
+/* =============== RESPONSIVE =============== */
+@media (max-width: 768px) {
+  body {
+    padding: 2em;
+    font-size: 16px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    min-width: auto;
+    padding: 0.8em;
+  }
+
+  .colors td {
+    height: 2.5em;
+    font-size: 0.9em;
+  }
+}
