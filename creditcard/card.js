@@ -17,7 +17,7 @@ function submitHandler(event) {
 	// check credit card number
 	if (isNaN(this.cardNumber.value)) {
 		// it is not a valid number
-		errorMsg += 'Card number is not a valid number\n'
+		errorMsg += 'Card number is not a valid number.\n'
 	} else if (!isCardNumberValid(this.cardNumber.value)) {
 		// it is a number, but is it valid?
 		errorMsg += 'Card number is not a valid card number\n'
