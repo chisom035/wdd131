@@ -1,4 +1,3 @@
-// Simple credit card form stuff
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('paymentForm');
     const cardNum = document.getElementById('cardnum');
@@ -19,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
         e.target.value = newVal;
     });
 
-    // Jump to year when month is filled
     month.addEventListener('input', function(e) {
         if(e.target.value.length === 2) {
             year.focus();
@@ -35,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Check if year is valid (not in the past)
+    // Check if year is valid
     year.addEventListener('blur', function(e) {
         const currentYear = new Date().getFullYear() % 100;
         const inputYear = parseInt(e.target.value);
@@ -68,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Convert 2-digit year to 4-digit year
         const fullYear = year < 100 ? 2000 + year : year;
         
-        // Create expiration date (last day of the month)
+        // Create expiration date
         const expirationDate = new Date(fullYear, month, 0);
         
         // Check if expiration date is in the future
@@ -92,10 +90,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // check credit card number
         if (isNaN(cardNumberValue)) {
-            // it is not a valid number
             errorMsg += 'Card number is not a valid number<br>';
         } else if (!isCardNumberValid(this.cardnum.value)) {
-            // it is a number, but is it valid?
             errorMsg += 'Card number is not a valid card number<br>';
         }
         
@@ -132,12 +128,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         if (errorMsg !== '') {
-            // there was an error. stop the form and display the errors.
             displayError(errorMsg);
             return false;
         }
         
-        // If we get here, everything is valid!
+        
         alert('Payment processed successfully! Thank you.');
         this.reset();
         return true;
